@@ -30,10 +30,18 @@ header {
     z-index: 99;
     width:100%;
     box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+/*Nav Toggle*/
+#nav-toggle:checked~nav {
+    display:block;
 }
 header a {
     text-decoration: none;
     color: inherit
+    
 
 }
 h1 { font-family: 'Oswald', sans-serif;
@@ -55,7 +63,7 @@ h1 { font-family: 'Oswald', sans-serif;
     border-bottom: 1px solid #3a3a3a;
 }
 
-/*Navbar styles and menu dropdown*/
+/*Navbar styles and menu dropdown, se to hidden*/
 nav {
     position: absolute;
     background-color: #ffffff;
@@ -64,8 +72,16 @@ nav {
     left: 0;
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
+    top:100%;
 }
 
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label{
+    font-size:2rem;
+}
 
 /*Main*/
 main {
